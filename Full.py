@@ -7,23 +7,24 @@ class Example:
     def __init__(self):
         pygame.init()
 
-        self.screen = pygame.display.set_mode((400, 300))
-        pygame.display.set_caption("examples")
+        size = width, height = 800, 600
+        self.screen = pygame.display.set_mode(size)
+        pygame.display.set_caption("标题")
+
+        self.is_running = True
+        self.clock = pygame.time.Clock()
 
     def run_game(self):
-        ball_image = pygame.image.load('images/ball.png')
-
-        while True:
+        while self.is_running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
 
-            # 背景色
             self.screen.fill((233, 233, 233))
-            # Surface
-            self.screen.blit(ball_image, (100, 100))
 
             pygame.display.flip()
+
+            self.clock.tick(60)
 
 
 if __name__ == '__main__':
