@@ -8,11 +8,11 @@ class Example:
         pygame.init()
 
         self.screen = pygame.display.set_mode((400, 300))
-        pygame.display.set_caption("examples")
+        pygame.display.set_caption("systems")
 
     def run_game(self):
 
-        ball_image = pygame.image.load('images/ball.png')
+        ball_image = pygame.image.load('assets/images/ball.png')
 
         while True:
             for event in pygame.event.get():

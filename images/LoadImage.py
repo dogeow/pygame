@@ -6,7 +6,7 @@ pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
 
-ball_image = pygame.image.load('../images/ball.png')
+ball_image = pygame.image.load('../assets/images/ball.png')
 
 while True:
     for event in pygame.event.get():

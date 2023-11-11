@@ -9,7 +9,7 @@ WHITE = (255, 255, 255)
 
 screen = pygame.display.set_mode(SIZE)
 
-ball_image = pygame.image.load('../images/ball.png')
+ball_image = pygame.image.load('../assets/images/ball.png')
 ball_rect = ball_image.get_rect()
 
 while True:
