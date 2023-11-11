@@ -1,3 +1,4 @@
+"""声音"""
 import pygame
 import sys
 

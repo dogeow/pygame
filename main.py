@@ -11,12 +11,14 @@ class Example:
         pygame.display.set_caption("examples")
 
     def run_game(self):
+
         ball_image = pygame.image.load('images/ball.png')
 
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    sys.exit()
+                    pygame.quit()
+
 
             # 背景色
             self.screen.fill((233, 233, 233))

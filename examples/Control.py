@@ -1,3 +1,4 @@
+"""按键控制"""
 import pygame
 import sys
 

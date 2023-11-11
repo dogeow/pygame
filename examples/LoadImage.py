@@ -1,3 +1,4 @@
+"""加载图片"""
 import pygame
 import sys
 
