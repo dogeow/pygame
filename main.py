@@ -1,33 +1,44 @@
+import pygame
 import sys
 
-import pygame
+pygame.init()
 
+# 设置窗口
+width, height = 800, 600
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Pygame Lego Figure Example")
 
-class Example:
-    def __init__(self):
-        pygame.init()
+# 设置颜色
+black = (0, 0, 0)
+yellow = (255, 255, 0)
 
-        self.screen = pygame.display.set_mode((400, 300))
-        pygame.display.set_caption("systems")
+# 游戏循环
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
 
-    def run_game(self):
+    # 渲染背景
+    screen.fill((255, 255, 255))  # 白色背景
 
-        ball_image = pygame.image.load('assets/images/ball.png')
+    # 画头部
+    pygame.draw.circle(screen, yellow, (400, 150), 30)
 
-        while True:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
+    # 画身体
+    pygame.draw.rect(screen, black, (385, 180, 30, 50))
 
+    # 画左腿
+    pygame.draw.rect(screen, black, (385, 230, 10, 30))
 
-            # 背景色
-            self.screen.fill((233, 233, 233))
-            # Surface
-            self.screen.blit(ball_image, (100, 100))
+    # 画右腿
+    pygame.draw.rect(screen, black, (405, 230, 10, 30))
 
-            pygame.display.flip()
+    # 画左手臂
+    pygame.draw.rect(screen, black, (375, 180, 10, 30))
 
+    # 画右手臂
+    pygame.draw.rect(screen, black, (415, 180, 10, 30))
 
-if __name__ == '__main__':
-    ai = Example()
-    ai.run_game()
+    # 更新屏幕
+    pygame.display.flip()
